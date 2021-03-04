@@ -30,9 +30,8 @@
 
 // let numero = 1;
 const numeroPrimo = (num) => {
-    console.time('loop'); 
-    // let num = null;
-    
+    console.time('time1'); 
+    // let num = 7;
     let x = 1;
     let contador = 0;
     
@@ -43,15 +42,15 @@ const numeroPrimo = (num) => {
         }
         x += 1;
     }
-    
     if (contador == 2) {
         console.log(`El numero ${num} SI es primo`); 
     } else {
         console.log(`El numero ${num} NO es primo`);
     }
-    console.timeEnd('loop'); 
+    console.timeEnd('time1'); 
 }
 
+// numeroPrimo(911);
 
 const segundoPrimo = (num) => {
     console.time('loop'); 
@@ -69,8 +68,7 @@ const segundoPrimo = (num) => {
 }
 
 
-segundoPrimo(1);
-numeroPrimo(1);
+// segundoPrimo(1);
 
 
 /* 
@@ -82,3 +80,29 @@ numeroPrimo(1);
 6.Dentro de la iteracion, escribimos el condicional (numero MOD == 0) en casi de ser V, contador aumenta +1
 7.X aumenta +1
 */
+
+
+
+
+
+const primosEnC = (num) => {
+    // let num, resto, x;
+    console.time('time3'); 
+    let resto, x;
+    x = 2;
+    resto = num % x;
+    while( (resto) && (x < num) ) {
+        x = x + 1;
+        resto = num % x;
+    }
+    
+    console.timeEnd('time3'); 
+    (x == num) ? console.log('Si es primo') : console.log('no es primo') ;    
+}
+
+// primosEnC(911);
+
+
+
+
+
